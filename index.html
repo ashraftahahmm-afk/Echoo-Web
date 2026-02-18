@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>Echoo Chat</title>
+<link rel="stylesheet" href="style.css">
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app.js"></script>
+<script type="module" src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database.js"></script>
+</head>
+<body>
+
+<div id="login-container">
+  <h1>Echoo</h1>
+  <p>تواصل بسرعة وسهولة</p>
+  <button id="guestLogin">دخول كضيف</button>
+  <button id="googleLogin">تسجيل دخول بـ Google</button>
+  <button id="facebookLogin">تسجيل دخول بـ Facebook</button>
+  <button id="twitterLogin">تسجيل دخول بـ Twitter</button>
+  <button id="appleLogin">تسجيل دخول بـ Apple</button>
+</div>
+
+<div id="profile-container" style="display:none;">
+  <h2>ملفي الشخصي</h2>
+  <img id="profileAvatar" src="https://i.pravatar.cc/150" alt="Avatar">
+  <p>الاسم: <span id="profileName"></span></p>
+  <p>الحالة: <span id="profileStatus">متاح</span></p>
+  <p>Bio: <span id="profileBio">مرحبا! هذا ملفي الشخصي.</span></p>
+  <p>عدد الرسائل: <span id="profileStats">0</span></p>
+  <button id="backToChat">العودة للشات</button>
+</div>
+
+<div id="chat-container" style="display:none;">
+  <div id="chat-header">
+    <h3>مرحباً <span id="userName"></span></h3>
+    <button id="openProfile">عرض ملفي الشخصي</button>
+  </div>
+  <div id="messages"></div>
+  <div id="input-area">
+    <input type="text" id="messageInput" placeholder="اكتب رسالتك...">
+    <button id="sendBtn">إرسال</button>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
